@@ -30,17 +30,26 @@ Our findings expose three fundamental properties of episodic memory in RL:
 ## 🧠 Algorithmic Framework: ES-RND
 
 Standard curiosity models compute the intrinsic reward as:
+
 $$r_i^{(t)} = \frac{1}{2} \| \hat{f}(s_t; \theta) - f(s_t) \|_2^2$$
+
 where $f$ is a fixed, randomly initialized target network and $\hat{f}$ is a predictor network. In the presence of a dynamic, stochastic distractor, the prediction error remains permanently high, completely trapping the agent.
 
 ES-RND introduces an episodic memory buffer $\mathcal{M}_t$ which records the embeddings $f(s_i)$ of observations visited during the current episode:
+
 $$\mathcal{M}_t = \{ f(s_{t-j}) \}_{j=1}^{\min(t, K)}$$
+
 where $K$ is the buffer size. Let the similarity between the current state $s_t$ and the memory buffer be:
+
 $$\text{sim}(f(s_t), \mathcal{M}_t) = \max_{e \in \mathcal{M}_t} \frac{f(s_t) \cdot e}{\|f(s_t)\|_2 \|e\|_2}$$
 
 We evaluate both **Strict Gating** (where intrinsic rewards are completely suppressed if similarity exceeds $\tau$) and **Soft Gating** (where a penalty multiplier is applied). In our experiments, we implement a soft gating mechanism with a penalty multiplier $\lambda = 0.20$ to maintain a minor exploration gradient:
-$$m(s_t) = \mathbb{I}\left( \text{sim}(f(s_t), \mathcal{M}_t) > \tau \right)$$
+
+$$m(s_t) = I\left( \text{sim}(f(s_t), \mathcal{M}_t) > \tau \right)$$
+
 $$r_{\text{pen}}^{(t)} = r_i^{(t)} \cdot \left( 1 - m(s_t) \cdot (1 - \lambda) \right)$$
+
+Where $I$ is the indicator function that outputs 1 if the similarity is greater than the threshold $\tau$, and 0 otherwise.
 
 ---
 
