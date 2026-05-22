@@ -1,0 +1,72 @@
+{
+  "b50_tau98": {
+    "key": "b50_tau98",
+    "name": "ES-RND (K=50, Tau=0.98)",
+    "max_return": 1.0,
+    "mean_return": 0.9616820524219897,
+    "final_return": 1.0,
+    "noisy_tv_visits": 23769,
+    "noisy_tv_occupancy_pct": 4.7565,
+    "first_key_step": 328,
+    "first_door_step": 1184,
+    "mean_episode_length": 38.27090352220521,
+    "mean_cos_sim": 0.9342175399117385,
+    "mean_penalty_ratio": 0.6842161084784836
+  },
+  "b50_tau95": {
+    "key": "b50_tau95",
+    "name": "ES-RND (K=50, Tau=0.95)",
+    "max_return": 1.0,
+    "mean_return": 0.9741744872010393,
+    "final_return": 1.0,
+    "noisy_tv_visits": 19121,
+    "noisy_tv_occupancy_pct": 3.8264,
+    "first_key_step": 328,
+    "first_door_step": 1184,
+    "mean_episode_length": 34.74459506430309,
+    "mean_cos_sim": 0.9276772521747053,
+    "mean_penalty_ratio": 0.8762867411629098
+  },
+  "b50_tau90": {
+    "key": "b50_tau90",
+    "name": "ES-RND (K=50, Tau=0.90)",
+    "max_return": 1.0,
+    "mean_return": 0.9852067224302398,
+    "final_return": 1.0,
+    "noisy_tv_visits": 10012,
+    "noisy_tv_occupancy_pct": 2.0036,
+    "first_key_step": 328,
+    "first_door_step": 1184,
+    "mean_episode_length": 31.940060067735956,
+    "mean_cos_sim": 0.9221210259736419,
+    "mean_penalty_ratio": 0.8979572233606558
+  },
+  "b50_tau85": {
+    "key": "b50_tau85",
+    "name": "ES-RND (K=50, Tau=0.85)",
+    "max_return": 1.0,
+    "mean_return": 0.9513204076244727,
+    "final_return": 1.0,
+    "noisy_tv_visits": 20755,
+    "noisy_tv_occupancy_pct": 4.1534,
+    "first_key_step": 328,
+    "first_door_step": 1184,
+    "mean_episode_length": 41.76867792077553,
+    "mean_cos_sim": 0.9383730325864206,
+    "mean_penalty_ratio": 0.9197717885502049
+  },
+  "b50_tau80": {
+    "key": "b50_tau80",
+    "name": "ES-RND (K=50, Tau=0.80)",
+    "max_return": 1.0,
+    "mean_return": 0.9519206625366946,
+    "final_return": 1.0,
+    "noisy_tv_visits": 33188,
+    "noisy_tv_occupancy_pct": 6.6414,
+    "first_key_step": 328,
+    "first_door_step": 1184,
+    "mean_episode_length": 41.82793539208302,
+    "mean_cos_sim": 0.9388268151953049,
+    "mean_penalty_ratio": 0.9231717469262295
+  }
+}
