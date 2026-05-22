@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+
+# Tensorboard & Runs
+runs/
+runs_updated_buffer_ablation/
+runs_buffer50_tau/
+runs_small_grid/
+runs_montezuma_comparison/
+
+# Logs & OS Files
+.DS_Store
+*.log
+.idea/
+.vscode/
+.pytest_cache/
